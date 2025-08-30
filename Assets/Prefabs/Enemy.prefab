@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2052703948083559143}
-  - component: {fileID: 1941578427248974136}
+  - component: {fileID: 1980608665698077251}
   m_Layer: 0
   m_Name: AttackPoint
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8389737521522396006}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1941578427248974136
+--- !u!114 &1980608665698077251
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,13 +41,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2964425160344750899}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 257134ddab016f047ad8f6b21cf66d99, type: 3}
+  m_Script: {fileID: 11500000, guid: d03b232ffff44e1c82c666edc8b4cdd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _prefab: {fileID: 3206168188452460208, guid: c50d20da87911a144a269a837238e394, type: 3}
-  _repeatRate: 2
   _maxPoolSize: 30
-  _spawnPoint: {fileID: 2052703948083559143}
+  _repeatRate: 1
 --- !u!1 &4967059430927879339
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,6 +60,7 @@ GameObject:
   - component: {fileID: 4845917514671376144}
   - component: {fileID: -30073494406316100}
   - component: {fileID: 1184038271236418100}
+  - component: {fileID: 7911827622688281493}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -224,4 +224,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52c190a2a2a844228f050d31ec99c003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 2
+--- !u!114 &7911827622688281493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4967059430927879339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce79b37705124970a255fda10d394fb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 4

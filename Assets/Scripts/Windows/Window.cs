@@ -5,9 +5,9 @@ using UnityEngine.UI;
 public abstract class Window : MonoBehaviour
 {
     [SerializeField] private Button _button;
-    
-    public Action ButtonClicked;
-    
+
+    public event Action ButtonClicked;
+
     private void OnEnable()
     {
         _button.onClick.AddListener(OnClickHandler);

@@ -2,13 +2,16 @@ using UnityEngine;
 
 public class ShipBullet : Bullet
 {
-    private void Start()
-    {
-        transform.rotation = Quaternion.Euler(0, 0, -90);
-    }
-    
+    private Vector2 _direction;
+
     private new void Update()
     {
-        transform.Translate(transform.up * (Speed * Time.deltaTime), Space.World);
+        transform.Translate(_direction * (Speed * Time.deltaTime), Space.World);
+    }
+
+    public void SetDirection(Vector2 direction)
+    {
+        _direction = direction;
+        transform.up = direction; // Устанавливаем поворот пули
     }
 }

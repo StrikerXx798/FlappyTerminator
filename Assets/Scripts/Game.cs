@@ -51,7 +51,7 @@ public class Game : MonoBehaviour
 
     private void ResetSpawners()
     {
-        _shipBulletSpawner.Pool.Dispose();
+        _shipBulletSpawner.ClearActiveItems();
         _enemySpawner.ClearActiveItems();
     }
 }
