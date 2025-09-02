@@ -685,7 +685,7 @@ GameObject:
   - component: {fileID: 572015715}
   - component: {fileID: 572015714}
   - component: {fileID: 572015718}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1794,7 +1794,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c5f97076d794c78a8546889345d1ebb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _shipBulletSpawner: {fileID: 2083444455}
   _enemySpawner: {fileID: 1230492195}
   _scoreCounter: {fileID: 1966991011}
   _ship: {fileID: 1966991005}
@@ -2363,8 +2362,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefab: {fileID: 1184038271236418100, guid: e8fbea4ea2393014daa26108e49c5868, type: 3}
-  _repeatRate: 1.5
   _maxPoolSize: 20
+  _repeatRate: 1.5
   _scoreCounter: {fileID: 1966991011}
   _spawnArea: {fileID: 1230492194}
 --- !u!1 &1247641478
@@ -3293,17 +3292,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &2083444455 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6021457987140200247, guid: 33e84355706aa6547bb09bf03108f709, type: 3}
-  m_PrefabInstance: {fileID: 5308239920858888313}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88d6cdbd094542d8aed3c000ad779357, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &5308239920858888313
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3312,21 +3300,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4382282161640166721, guid: 33e84355706aa6547bb09bf03108f709, type: 3}
-      propertyPath: m_Size.x
-      value: 1.8518271
-      objectReference: {fileID: 0}
-    - target: {fileID: 4382282161640166721, guid: 33e84355706aa6547bb09bf03108f709, type: 3}
-      propertyPath: m_Size.y
-      value: 2.8396597
-      objectReference: {fileID: 0}
-    - target: {fileID: 4382282161640166721, guid: 33e84355706aa6547bb09bf03108f709, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.025537252
-      objectReference: {fileID: 0}
-    - target: {fileID: 4382282161640166721, guid: 33e84355706aa6547bb09bf03108f709, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.06635213
+    - target: {fileID: 4529106007034168199, guid: 33e84355706aa6547bb09bf03108f709, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4743411349182076814, guid: 33e84355706aa6547bb09bf03108f709, type: 3}
       propertyPath: m_LocalPosition.x

@@ -4,12 +4,24 @@ using UnityEngine;
 public abstract class AutoSpawner<T> : BaseSpawner<T> where T : Element
 {
     [SerializeField] private float _repeatRate = 2f;
-    
+
+    private Coroutine _spawnCoroutine;
+
     private void Start()
     {
-        StartCoroutine(SpawnCoroutine());
+        _spawnCoroutine = StartCoroutine(SpawnCoroutine());
     }
-    
+
+    private void OnDestroy()
+    {
+        RemoveCoroutine();
+    }
+
+    private void OnDisable()
+    {
+        RemoveCoroutine();
+    }
+
     private IEnumerator SpawnCoroutine()
     {
         var wait = new WaitForSeconds(_repeatRate);
@@ -19,6 +31,14 @@ public abstract class AutoSpawner<T> : BaseSpawner<T> where T : Element
             GetItem();
 
             yield return wait;
+        }
+    }
+
+    private void RemoveCoroutine()
+    {
+        if (_spawnCoroutine is not null)
+        {
+            StopCoroutine(_spawnCoroutine);
         }
     }
 }

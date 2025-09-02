@@ -14,11 +14,6 @@ public class ShipCollisionHandler : MonoBehaviour
     {
         if (other.TryGetComponent(out IInteractable interactable))
         {
-            if (other.TryGetComponent(out EnemyBullet bullet))
-            {
-                bullet.Explode();
-            }
-
             CollisionDetected?.Invoke(interactable);
         }
     }

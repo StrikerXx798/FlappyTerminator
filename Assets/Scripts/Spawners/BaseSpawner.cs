@@ -43,7 +43,7 @@ public abstract class BaseSpawner<T> : MonoBehaviour where T : Element
         item.gameObject.SetActive(false);
     }
     
-    public void GetItem()
+    protected void GetItem()
     {
         _pool.Get();
     }

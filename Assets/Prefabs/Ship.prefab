@@ -9,9 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3316798639416075538}
-  - component: {fileID: 5579956406784786184}
-  - component: {fileID: 6021457987140200247}
-  m_Layer: 0
+  - component: {fileID: 6273216286534809778}
+  m_Layer: 6
   m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,13 +26,13 @@ Transform:
   m_GameObject: {fileID: 5319367088553351686}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.66, z: 0}
+  m_LocalPosition: {x: -0, y: 2.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4743411349182076814}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5579956406784786184
+--- !u!114 &6273216286534809778
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,23 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65bd6fa73156438c98d3c8033e57eccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _prefab: {fileID: 7559228605464110807, guid: 825ae6296fb451b4f94e3c9a2c45adbe, type: 3}
+  _maxPoolSize: 15
   _inputReader: {fileID: 7149543398797249154}
-  _shipBulletSpawner: {fileID: 6021457987140200247}
---- !u!114 &6021457987140200247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5319367088553351686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88d6cdbd094542d8aed3c000ad779357, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _prefab: {fileID: 939600676691903673, guid: 825ae6296fb451b4f94e3c9a2c45adbe, type: 3}
-  _maxPoolSize: 30
-  _spawnPoint: {fileID: 3316798639416075538}
 --- !u!1 &6004712717626923322
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,7 +58,7 @@ GameObject:
   - component: {fileID: 6307991124922187480}
   - component: {fileID: 4382282161640166721}
   - component: {fileID: 6520583850621143711}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CollisionArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +114,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.008468747, y: -0.049284577}
+  m_Offset: {x: 0.025537252, y: -0.06635213}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -139,7 +124,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.8859613, y: 2.8737957}
+  m_Size: {x: 1.8518271, y: 2.8396597}
   m_EdgeRadius: 0
 --- !u!114 &6520583850621143711
 MonoBehaviour:
@@ -169,7 +154,7 @@ GameObject:
   - component: {fileID: 7012793191120732651}
   - component: {fileID: 4090906343421704132}
   - component: {fileID: 7149543398797249154}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,7 +170,7 @@ Transform:
   m_GameObject: {fileID: 8046623206303668940}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -6.63, y: -0.15, z: 0}
+  m_LocalPosition: {x: -7, y: 0, z: 0}
   m_LocalScale: {x: 0.70000005, y: 0.70000005, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children:

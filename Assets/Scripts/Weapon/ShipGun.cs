@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 
-public class Gun : MonoBehaviour
+public class ShipGun : ManualSpawner<Bullet>
 {
     [SerializeField] private InputReader _inputReader;
-    [SerializeField] private ShipBulletSpawner _shipBulletSpawner;
 
     private void OnEnable()
     {
@@ -15,8 +14,17 @@ public class Gun : MonoBehaviour
         _inputReader.PrimaryActionPerformed += Shoot;
     }
 
+    protected override Bullet CreatePooledItem()
+    {
+        var bullet = Instantiate(Prefab);
+        bullet.transform.position = transform.position;
+        bullet.SetDirection(transform.up);
+
+        return bullet;
+    }
+
     private void Shoot()
     {
-        _shipBulletSpawner.GetItem();
+        Spawn();
     }
 }
