@@ -7,7 +7,7 @@ public class Enemy : Element, IInteractable
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.TryGetComponent(out Bullet _))
+        if (other.TryGetComponent(out IInteractable _))
         {
             Die();
         }

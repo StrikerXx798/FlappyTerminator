@@ -4,9 +4,10 @@ using UnityEngine;
 [RequireComponent(typeof(Mover))]
 public class Ship : MonoBehaviour
 {
+    [SerializeField] private ShipCollisionHandler _handler;
+    
     private Mover _mover;
     private ScoreCounter _scoreCounter;
-    [SerializeField] private ShipCollisionHandler _handler;
 
     public event Action GameOver;
 
@@ -23,7 +24,7 @@ public class Ship : MonoBehaviour
 
     private void OnDisable()
     {
-        _handler.CollisionDetected += ProcessCollision;
+        _handler.CollisionDetected -= ProcessCollision;
     }
 
     private void ProcessCollision(IInteractable interactable)

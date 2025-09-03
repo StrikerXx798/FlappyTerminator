@@ -9,7 +9,7 @@ public abstract class BaseSpawner<T> : MonoBehaviour where T : Element
     protected T Prefab => _prefab;
 	private ObjectPool<T> _pool;
 
-	protected void Awake()
+	private void Awake()
     {
         _pool = new ObjectPool<T>
         (
@@ -21,6 +21,16 @@ public abstract class BaseSpawner<T> : MonoBehaviour where T : Element
             maxSize: _maxPoolSize,
             collectionCheck: true
         );
+    }
+    
+    public void ClearActiveItems()
+    {
+        foreach (var item in FindObjectsByType<T>(FindObjectsSortMode.None))
+        {
+            Destroy(item.gameObject);
+        }
+
+        _pool.Dispose();
     }
 
     protected virtual T CreatePooledItem()
@@ -37,24 +47,14 @@ public abstract class BaseSpawner<T> : MonoBehaviour where T : Element
     {
         Destroy(item.gameObject);
     }
-
-    private void OnReleasePooledItem(T item)
-    {
-        item.gameObject.SetActive(false);
-    }
     
-    protected void GetItem()
+    protected void SpawnItem()
     {
         _pool.Get();
     }
-
-    public void ClearActiveItems()
+    
+    private void OnReleasePooledItem(T item)
     {
-        foreach (var item in FindObjectsByType<T>(FindObjectsSortMode.None))
-        {
-            Destroy(item.gameObject);
-        }
-
-        _pool.Dispose();
+        item.gameObject.SetActive(false);
     }
 }

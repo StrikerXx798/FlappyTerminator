@@ -5,7 +5,7 @@ public class CameraTracker : MonoBehaviour
     [SerializeField] private Mover _ship;
     [SerializeField] private float _xOffset;
 
-    private void Update()
+    private void LateUpdate()
     {
         var position = transform.position;
         position.x = _ship.transform.position.x + _xOffset;

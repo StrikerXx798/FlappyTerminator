@@ -28,7 +28,7 @@ public abstract class AutoSpawner<T> : BaseSpawner<T> where T : Element
 
         while (enabled)
         {
-            GetItem();
+            SpawnItem();
 
             yield return wait;
         }

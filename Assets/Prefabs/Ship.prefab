@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefab: {fileID: 7559228605464110807, guid: 825ae6296fb451b4f94e3c9a2c45adbe, type: 3}
   _maxPoolSize: 15
+  _shootDelay: 0.5
   _inputReader: {fileID: 7149543398797249154}
 --- !u!1 &6004712717626923322
 GameObject:
